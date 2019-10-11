@@ -1,0 +1,19 @@
+{
+  "name": "auspol-sentimant",
+  "version": "0.0.1",
+  "description": "Who is popular with the papers.",
+  "scripts": {
+    "build": "rm -rf dist && babel src --out-dir dist --copy-files"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.6.3",
+    "@google-cloud/language": "^3.4.0",
+    "babel-preset-blueflag": "^1.0.1",
+    "mongodb": "^3.3.2",
+    "node-fetch": "^2.6.0",
+    "node-html-parser": "^1.1.16",
+    "rss-parser": "^3.7.2",
+    "rxjs": "^6.5.3",
+    "uuid": "^3.3.3"
+  }
+}
