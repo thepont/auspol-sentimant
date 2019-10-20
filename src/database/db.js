@@ -47,7 +47,7 @@ const find  = ({collection}) => (query = {}, options) => {
         let dbCollection = client.db(dbName).collection(collection);
         let cursor = dbCollection.find(query, options);
         cursor.on("data", (document) => {
-            console.log('GOT DOCUMENT', document)
+            // console.log('GOT DOCUMENT', document)
             subscriber.next(document)
         })
         cursor.on("end", () => {
@@ -58,6 +58,7 @@ const find  = ({collection}) => (query = {}, options) => {
 
 
 module.exports = { 
+    db: () =>  client.db(dbName),
     client,
     insert,
     find,

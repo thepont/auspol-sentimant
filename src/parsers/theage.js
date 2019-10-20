@@ -66,7 +66,7 @@ const parseContent = () => (obs) => {
 			if(article != null){
 				let sections = root.querySelector("article").querySelectorAll("section")
 				let [content] = sections
-					.reduce(( rr, ii, idx) => idx ? rr = `${rr} ${ii.text}` : "", "")
+					.reduce(( rr, ii, idx) => idx ? rr = `${rr} ${ii.text} ` : "", "")
 					.replace("Loading", " ")
 					.split("License this article");
 				return {
